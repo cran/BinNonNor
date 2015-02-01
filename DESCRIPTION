@@ -1,8 +1,8 @@
 Package: BinNonNor
 Type: Package
 Title: Data Generation with Binary and Continuous Non-normal Components
-Version: 1.0
-Date: 2014-12-15
+Version: 1.1
+Date: 2015-02-01
 Author: Gul Inan, Hakan Demirtas
 Maintainer: Gul Inan <ginan@metu.edu.tr>
 Description: Generation of multiple binary and continuous non-normal variables simultaneously 
@@ -10,7 +10,7 @@ Description: Generation of multiple binary and continuous non-normal variables s
              proposed by Demirtas et al. (2012).
 License: GPL (>= 2)
 Depends: BB, corpcor, mvtnorm, Matrix
-Packaged: 2014-12-15 19:20:02 UTC; arcelik
+Packaged: 2015-02-01 13:06:21 UTC; arcelik
 NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2014-12-16 08:17:47
+Date/Publication: 2015-02-01 14:58:31

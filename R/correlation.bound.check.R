@@ -12,6 +12,7 @@ function(n.BB, n.NN, prop.vec=NULL, corr.vec = NULL, corr.mat = NULL, coef.mat=N
    corr.mat=corr.mat+t(corr.mat)-diag(1,d)
    }
 
+   if((n.BB+n.NN)>1) {
    errorCount= 0
 
    for (i in 1:(n.BB+n.NN-1))   {
@@ -29,6 +30,6 @@ function(n.BB, n.NN, prop.vec=NULL, corr.vec = NULL, corr.mat = NULL, coef.mat=N
    if (errorCount > 0) {
    stop("Range violation occurred in the target correlation matrix! \n")
    }
-
+   }
 return(TRUE)
 }

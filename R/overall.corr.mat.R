@@ -12,7 +12,6 @@ function(n.BB, n.NN, prop.vec=NULL, corr.vec = NULL, corr.mat=NULL, coef.mat=NUL
 
    correlation.bound.check(n.BB, n.NN, prop.vec, corr.vec=NULL, corr.mat, coef.mat)
 
-
    if(!is.null(prop.vec) && is.null(coef.mat) ) {
    final.corr.mat<-diag(1,n.BB)
    final.corr.mat[1:n.BB,1:n.BB]=Tetra.Corr.BB(n.BB, prop.vec, corr.vec = NULL, corr.mat)

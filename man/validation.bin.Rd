@@ -15,29 +15,37 @@
 \value{The function returns TRUE if no specification problem is encountered. Otherwise, it returns an error message.}
 
 \examples{
+n.B<-2
 prop.vec=c(0.5,0.6)
-validation.bin(2,prop.vec)
+validation.bin(n.B,prop.vec)
 
 \dontrun{
+n.B<-2
 prop.vec=c(0.5,0.6)
 validation.bin(prop.vec=prop.vec)
 
+n.B<-3
 prop.vec=c(0.5,0.6)
-validation.bin(-3,prop.vec)
+validation.bin(n.B,prop.vec)
 
+n.B<-3
 prop.vec=c(0.5,0.6)
-validation.bin(3)
+validation.bin(n.B)
 
+n.B<-0
 prop.vec=c(0.5,0.6)
-validation.bin(0,prop.vec=prop.vec)
+validation.bin(n.B,prop.vec=prop.vec)
 
+n.B<-3
 prop.vec=c(0.5,0.6)
-validation.bin(3,prop.vec)
+validation.bin(n.B,prop.vec)
 
+n.B<-3
 prop.vec=NULL
-validation.bin(3,prop.vec)
+validation.bin(n.B,prop.vec)
 
+n.B<-3
 prop.vec=c(1,1.5,-1.5)
-validation.bin(3,prop.vec)
+validation.bin(n.B,prop.vec)
 }
 }

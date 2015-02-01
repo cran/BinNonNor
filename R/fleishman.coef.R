@@ -1,8 +1,6 @@
 fleishman.coef <-
 function(n.NN, skewness.vec=NULL, kurtosis.vec=NULL){
 
-if(validation.skewness.kurtosis(n.NN,skewness.vec, kurtosis.vec)==TRUE) {
-
 fleishman.poly<- function(dd,gamma1,gamma2) {
  r <- c(NA,length(dd))
  r[1] <- dd[1]+dd[3]
@@ -33,6 +31,5 @@ if(length(index)==1) {coef.mat[,i]<-round(soln1[which(apply(round(soln1,5), 1, f
 }#for
 rownames(coef.mat)=c("a","b","c","d")
 colnames(coef.mat)=paste("NN",seq(1:n.NN), sep="")
-}#validation
 return(coef.mat)
 }

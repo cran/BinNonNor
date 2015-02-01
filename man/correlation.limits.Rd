@@ -21,11 +21,12 @@ correlation bounds. The American Statistician, 65(2), 104-109.
 Demirtas, H., Hedeker, D., and Mermelstein, R.J. (2012). Simulation of massive public health data by power polynomials. 
 Statistics in Medicine, 31(27), 3337-3346.}
 \seealso{\code{\link{fleishman.coef}}, \code{\link{correlation.bound.check}}}
-\examples{
-prop.vec=c(0.4,0.7)
-n.BB=2
-n.NN=4
 
+\examples{
+
+n.BB<-2
+n.NN<-4
+prop.vec=c(0.4,0.7)
 coef.mat=matrix(c(
  -0.31375,  0.00000,  0.10045, -0.10448,
   0.82632,  1.08574,  1.10502,  0.98085,
@@ -33,9 +34,12 @@ coef.mat=matrix(c(
   0.02271, -0.02945, -0.04001,  0.00272),4,byrow=TRUE)
 
 limits=correlation.limits(n.BB,n.NN, prop.vec,coef.mat)
-
 limits.bin=correlation.limits(n.BB,n.NN=0, prop.vec,coef.mat=NULL)
-
 limits.nonnor=correlation.limits(n.BB=0,n.NN, prop.vec=NULL,coef.mat)
 
+\dontrun{
+n.BB<-1
+prop.vec<-0.5
+limits=correlation.limits(n.BB,n.NN, prop.vec,coef.mat=NULL)
+}
 }

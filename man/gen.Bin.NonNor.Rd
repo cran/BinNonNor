@@ -30,7 +30,7 @@ Statistics in Medicine, 31(27), 3337-3346.}
 
 \examples{
 \dontrun{
-n=100
+n=1
 n.BB=2
 n.NN=4
 prop.vec=c(0.4,0.7)
@@ -47,53 +47,42 @@ corr.mat=matrix(c(1.0,-0.3,-0.3,-0.3,-0.3,-0.3,
 
 coef.mat=fleishman.coef(n.NN, skewness.vec, kurtosis.vec)
 
-coef.mat
-      NN1       NN2      NN3      NN4
-a -0.31375  0.00000  0.10045 -0.10448
-b  0.82632  1.08574  1.10502  0.98085
-c  0.31375  0.00000 -0.10045  0.10448
-d  0.02271 -0.02945 -0.04001  0.00272
-
+coef.mat=matrix(c(
+ -0.31375,  0.00000,  0.10045, -0.10448,
+  0.82632,  1.08574,  1.10502,  0.98085,
+  0.31375,  0.00000, -0.10045,  0.10448,
+  0.02271, -0.02945, -0.04001,  0.00272),4,byrow=TRUE)
 
 intcor.mat=Int.Corr.NN(n.NN, corr.vec = NULL, corr.mat, coef.mat) 
 
-intcor.mat
-          [,1]      [,2]      [,3]      [,4]
-[1,] 1.0000000 0.4487799 0.5940671 0.6471184
-[2,] 0.4487799 1.0000000 0.7099443 0.8112702
-[3,] 0.5940671 0.7099443 1.0000000 0.9436196
-[4,] 0.6471184 0.8112702 0.9436196 1.0000000
-
+intcor.mat=matrix(c(
+1.0000000, 0.4487800, 0.5940672, 0.6471184,
+0.4487800, 1.0000000, 0.7099443, 0.8112701,
+0.5940672, 0.7099443, 1.0000000, 0.9436195,
+0.6471184, 0.8112701, 0.9436195, 1.0000000),4,byrow=TRUE)
 
 tetcor.mat=Tetra.Corr.BB(n.BB, prop.vec, corr.vec = NULL, corr.mat)
-
-tetcor.mat
-           [,1]       [,2]
-[1,]  1.0000000 -0.4713861
-[2,] -0.4713861  1.0000000
-
+tetcor.mat=matrix(c(
+ 1.0000000, -0.4713861,
+-0.4713861,  1.0000000),2,byrow=TRUE)
 
 bicor.mat=Biserial.Corr.BN(n.BB, n.NN, prop.vec, corr.vec = NULL, corr.mat, coef.mat)
-
-bicor.mat
-           [,1]       [,2]       [,3]       [,4]
-[1,] -0.4253058 -0.3814058 -0.3862068 -0.3846430
-[2,] -0.4420612 -0.3964317 -0.4014219 -0.3997964
+bicor.mat=matrix(c(
+-0.4253059, -0.3814058, -0.3862068, -0.3846430,
+-0.4420613, -0.3964317, -0.4014219, -0.3997964),2,byrow=TRUE)
 
 final.corr.mat=overall.corr.mat(n.BB, n.NN, prop.vec, corr.vec = NULL, corr.mat, coef.mat)
 
-final.corr.mat
-           [,1]       [,2]       [,3]       [,4]       [,5]       [,6]
-[1,]  1.0000000 -0.4713861 -0.4253058 -0.3814058 -0.3862068 -0.3846430
-[2,] -0.4713861  1.0000000 -0.4420612 -0.3964317 -0.4014219 -0.3997964
-[3,] -0.4253058 -0.4420612  1.0000000  0.4487799  0.5940671  0.6471184
-[4,] -0.3814058 -0.3964317  0.4487799  1.0000000  0.7099443  0.8112702
-[5,] -0.3862068 -0.4014219  0.5940671  0.7099443  1.0000000  0.9436196
-[6,] -0.3846430 -0.3997964  0.6471184  0.8112702  0.9436196  1.0000000
+final.corr.mat=matrix(c(
+  1.0000000, -0.4713861, -0.4253059, -0.3814058, -0.3862068, -0.3846430,
+ -0.4713861,  1.0000000, -0.4420613, -0.3964317, -0.4014219, -0.3997964,
+ -0.4253059, -0.4420613,  1.0000000,  0.4487800,  0.5940672,  0.6471184,
+ -0.3814058, -0.3964317,  0.4487800,  1.0000000,  0.7099443,  0.8112701,
+ -0.3862068, -0.4014219,  0.5940672,  0.7099443,  1.0000000,  0.9436195,
+ -0.3846430, -0.3997964,  0.6471184,  0.8112701,  0.9436195,  1.0000000),6, byrow=TRUE)
 
-
-data=gen.Bin.NonNor(n, n.BB, n.NN, prop.vec, mean.vec, variance.vec, skewness.vec, kurtosis.vec, 
-final.corr.mat, coef.mat)
+data=gen.Bin.NonNor(n, n.BB, n.NN, prop.vec, mean.vec, variance.vec, skewness.vec, 
+kurtosis.vec, final.corr.mat, coef.mat)
 
 amat=final.corr.mat[1:2,1:2]
 multibin=gen.Bin.NonNor(n=1000, n.BB, n.NN=0, prop.vec, mean.vec=NULL, variance.vec=NULL, 
@@ -105,5 +94,37 @@ multinonnor=gen.Bin.NonNor(n=100, n.BB=0, n.NN, prop.vec=NULL, mean.vec, varianc
 skewness.vec, kurtosis.vec, final.corr.mat=bmat, coef.mat)
 apply(multinonnor,2,mean)
 apply(multinonnor,2,var)
+
+
+n<-1000
+n.BB<-1
+n.NN<-1
+prop.vec=0.6
+mean.vec=1
+variance.vec=1
+skewness.vec=2
+kurtosis.vec=6
+corr.vec=NULL
+corr.mat=matrix(c(1,-0.3,-0.3,1),2,2)
+coef.mat=matrix(c(-0.31375,0.82632,0.31375,0.02271),4,1)
+final.corr.mat=overall.corr.mat(n.BB, n.NN, prop.vec, corr.vec = NULL, corr.mat, coef.mat)
+data=gen.Bin.NonNor(n, n.BB, n.NN, prop.vec, mean.vec, variance.vec, skewness.vec, kurtosis.vec, 
+final.corr.mat, coef.mat)
+
+
+n<-1000
+n.BB<-1
+n.NN<-0
+prop.vec=0.6
+mean.vec=1
+variance.vec=NULL
+skewness.vec=NULL
+kurtosis.vec=NULL
+corr.vec=NULL
+corr.mat=diag(1)
+coef.mat=NULL
+final.corr.mat=overall.corr.mat(n.BB, n.NN, prop.vec, corr.vec = NULL, corr.mat, coef.mat)
+data=gen.Bin.NonNor(n, n.BB, n.NN, prop.vec, mean.vec, variance.vec, skewness.vec, 
+kurtosis.vec,final.corr.mat, coef.mat)
 }
 }

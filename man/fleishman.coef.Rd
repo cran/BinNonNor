@@ -28,21 +28,22 @@ Fleishman, A.I. (1978). A method for simulating non-normal distributions. Psycho
 \examples{
 
 \dontrun{
-
-#Consider four continuous non-normal variables, which come from
+#Consider four nonnormal continuous variables, which come from
 #Exp(1),Beta(4,4),Beta(4,2) and Gamma(10,10), respectively.
 #Skewness and kurtosis values of these variables are as follows:
-
+n.NN<-4
 skewness.vec=c(2,0,-0.4677,0.6325)
 kurtosis.vec=c(6,-0.5455,-0.3750,0.6)
-coef.mat=fleishman.coef(4,skewness.vec, kurtosis.vec)
+coef.mat=fleishman.coef(n.NN,skewness.vec, kurtosis.vec)
 
+n.NN<-1
 skewness.vec=c(0)
 kurtosis.vec=c(-1.2)
-coef.mat=fleishman.coef(1,skewness.vec, kurtosis.vec)
+coef.mat=fleishman.coef(n.NN,skewness.vec, kurtosis.vec)
 
+n.NN<-1
 skewness.vec1=c(3)
 kurtosis.vec1=c(5)
-coef.mat=fleishman.coef(1,skewness.vec1, kurtosis.vec1)
+coef.mat=fleishman.coef(n.NN,skewness.vec1, kurtosis.vec1)
 }
 }

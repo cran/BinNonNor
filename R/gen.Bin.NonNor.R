@@ -17,7 +17,6 @@ function(n, n.BB, n.NN, prop.vec=NULL, mean.vec=NULL, variance.vec=NULL, skewnes
      stop("Dimension of final correlation matrix does not match the number of binary variables! \n")
   }#if
 
-
   if(!is.null(prop.vec)&& is.null(skewness.vec)) {
   myz<-rmvnorm(n, mean=rep(0,n.BB),final.corr.mat)
   myb<-matrix(0,n,n.BB)
@@ -27,20 +26,21 @@ function(n, n.BB, n.NN, prop.vec=NULL, mean.vec=NULL, variance.vec=NULL, skewnes
   if(is.null(prop.vec) && !is.null(skewness.vec)) {
   myz<-rmvnorm(n, mean=rep(0,n.NN),final.corr.mat)
   myy<-matrix(0,n,n.NN)
-  myy=t(sapply(1:n, function(i) sapply(1:n.NN,function(j)   (coef.mat[1,j]+coef.mat[2,j]*myz[i,j]+coef.mat[3,j]*(myz[i,j]^2)+coef.mat[4,j]*myz[i,j]^3)*
-  sqrt(variance.vec[j])+(mean.vec[j]))))
+  myy=sapply(1:n, function(i) sapply(1:n.NN,function(j)   (coef.mat[1,j]+coef.mat[2,j]*myz[i,j]+coef.mat[3,j]*(myz[i,j]^2)+coef.mat[4,j]*myz[i,j]^3)*
+  sqrt(variance.vec[j])+(mean.vec[j])))
   mydata=cbind(myy)
   }else
   if(!is.null(prop.vec) && !is.null(skewness.vec))  {
   myz<-rmvnorm(n, mean=rep(0,(n.BB+n.NN)),final.corr.mat)
   myb<-matrix(0,n,n.BB)
-  myb=sapply(1:n.BB, function(ii) sapply(1:n, function(i)  if(1*myz[i,ii]>qnorm(1-prop.vec[ii])) myb[i,ii]=1 else myb[i,ii]=0 ))
+  myb=sapply(1:n.BB, function(ii) sapply(1:n, function(i)  if(1*myz[i,ii]>qnorm(1-prop.vec[ii])) myb[i,ii]=1 else myb[i,ii]=0))
+  myb=myb
   myy<-matrix(0,n,n.NN)
-  myy=t(sapply(1:n, function(i) sapply(1:n.NN,function(j)   (coef.mat[1,j]+coef.mat[2,j]*myz[i,j+n.BB]+coef.mat[3,j]*(myz[i,j+n.BB]^2)+coef.mat[4,j]*myz[i,j+n.BB]^3)*
-  sqrt(variance.vec[j])+(mean.vec[j]))))
+  myy=sapply(1:n, function(i) sapply(1:n.NN,function(j)   (coef.mat[1,j]+coef.mat[2,j]*myz[i,j+n.BB]+coef.mat[3,j]*(myz[i,j+n.BB]^2)+coef.mat[4,j]*myz[i,j+n.BB]^3)*
+  sqrt(variance.vec[j])+(mean.vec[j])))
   mydata=cbind(myb,myy)
+  colnames(mydata)<-NULL
   }#if
 
 return(mydata)
-
 }

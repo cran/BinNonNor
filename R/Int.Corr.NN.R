@@ -10,12 +10,13 @@ function(n.NN, corr.vec = NULL, corr.mat=NULL, coef.mat) {
 
   n.BB<-ncol(corr.mat)-n.NN
 
-  cor.mat.NN<-corr.mat[(n.BB+1):(n.BB+n.NN),(n.BB+1):(n.BB+n.NN)]
+  cor.mat.NN<-as.matrix(corr.mat[(n.BB+1):(n.BB+n.NN),(n.BB+1):(n.BB+n.NN)],n.NN,n.NN)
 
   correlation.bound.check(n.BB=0, n.NN, prop.vec=NULL, corr.vec=NULL, corr.mat=cor.mat.NN, coef.mat)
 
-  if(n.NN==1) {intcor.mat=1} else 
-  {
+  if(n.NN==1) {intcor.mat=1
+  } else 
+  if(n.NN>1){
   usigma.star.c<-diag(n.NN)
   for ( ii in 2:n.NN)        {
   for ( i in 1:(ii-1))       {
@@ -28,10 +29,9 @@ function(n.NN, corr.vec = NULL, corr.mat=NULL, coef.mat) {
   usigma.star.c[i,ii]=suppressWarnings(dfsane(par = p0, fn=mycorfunc, control=list(trace=FALSE)))$par
   }#ii
   }#i
-  }#if
-
   intcor.mat<-usigma.star.c+t(usigma.star.c)
   diag(intcor.mat)<-1
+  }#if 
 
 return(intcor.mat)
 }

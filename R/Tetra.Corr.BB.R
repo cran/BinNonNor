@@ -12,14 +12,15 @@ function(n.BB, prop.vec, corr.vec = NULL, corr.mat=NULL) {
 
   n.NN<-ncol(corr.mat)-n.BB
 
-  cor.mat.BB<-corr.mat[1:n.BB,1:n.BB]
+  cor.mat.BB<-as.matrix(corr.mat[1:n.BB,1:n.BB],n.BB,n.BB)
 
   correlation.bound.check(n.BB, n.NN=0, prop.vec, corr.vec=NULL, corr.mat=cor.mat.BB, coef.mat=NULL)
 
   q.vec=(1-prop.vec)
 
-  if(n.BB==1) {tetcor.mat=1} else 
-  {
+  if(n.BB==1) {tetcor.mat=1
+  } else 
+  if(n.BB>1) {
   ##get the pairwise correlations##
   usigma.star.b<-diag(n.BB)
   for ( i  in 2:n.BB)           {
@@ -33,10 +34,9 @@ function(n.BB, prop.vec, corr.vec = NULL, corr.mat=NULL) {
   usigma.star.b[ii,i]=suppressWarnings(dfsane(par = p0, fn=mycorfuncb, control=list(trace=FALSE)))$par
   }#ii
   }#i
-  }#if
-
   tetcor.mat<-usigma.star.b+t(usigma.star.b)
   diag(tetcor.mat)<-1
+  }#if
 
 return(tetcor.mat)
 }
