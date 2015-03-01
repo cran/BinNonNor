@@ -2,15 +2,15 @@
 \alias{BinNonNor-package}
 \alias{BinNonNor}
 \docType{package}
-\title{Data Generation with Binary and Continuous Non-normal Components}
+\title{Data Generation with Binary and Continuous Non-Normal Components}
 \description{Provides R functions for generation of multiple binary and continuous non-normal variables
 simultaneously given the marginal characteristics and association structure based on the methodology proposed by Demirtas et al. (2012).}
 \details{
 \tabular{ll}{
 Package: \tab BinNonNor\cr
 Type: \tab Package\cr
-Version: \tab 1.1\cr
-Date: \tab 2015-02-01\cr
+Version: \tab 1.2\cr
+Date: \tab 2015-03-01\cr
 License: \tab GPL (>= 2) \cr
 }
 This package consists of eleven functions. The functions \code{\link{validation.bin}},
@@ -23,7 +23,9 @@ checks the validity of the values of pairwise correlations. The functions \code{
 computes intermediate correlation matrix for continuous non-normal and continuous non-normal combinations, 
 tetrachoric correlations for binary and binary combinations, and biserial correlations for binary and continuous non-normal combinations, respectively. 
 The function \code{\link{overall.corr.mat}} assembles the final correlation matrix. The engine function \code{\link{gen.Bin.NonNor}}
-generates mixed data in accordance with the specified marginal and correlational quantities.}
+generates mixed data in accordance with the specified marginal and correlational quantities. Throughout the package, 
+variables are supposed to be inputted in a certain order, namely, first binary variables, and then continuous variables should be placed. 
+}
 \author{Gul Inan, Hakan Demirtas 
 
 Maintainer: Gul Inan <ginan@metu.edu.tr>}

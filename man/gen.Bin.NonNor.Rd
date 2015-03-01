@@ -1,7 +1,7 @@
 \name{gen.Bin.NonNor}
 \alias{gen.Bin.NonNor}
 \title{Simulates a sample of size n from a set of multivariate binary and continuous non-normal variables}
-\description{This function simulates a sample of size n from a set of multivariate binary and continuous non-normal variables with pre-specified marginals and final correlation matrix. Setting n.NN=0 and quantities that are pertinent to the continuous part to NULL results in simulation of a sample of size n from a set of multivariate binary variables. Similarly, setting n.BB=0
+\description{This function simulates a sample of size n from a set of multivariate binary and continuous non-normal data with pre-specified marginals and final correlation matrix. Setting n.NN=0 and quantities that are pertinent to the continuous part to NULL results in simulation of a sample of size n from a set of multivariate binary variables. Similarly, setting n.BB=0
 and prop.vec=NULL results in simulation of a sample of size n from a set of multivariate continuous non-normal variables.}
 
 \usage{gen.Bin.NonNor(n, n.BB, n.NN, prop.vec = NULL, mean.vec = NULL, variance.vec = NULL, 
@@ -20,7 +20,9 @@ skewness.vec = NULL, kurtosis.vec = NULL, final.corr.mat, coef.mat = NULL)}
   \item{coef.mat}{Matrix of coefficients produced from \code{\link{fleishman.coef}}.}
 }
 
-\value{A matrix of generated data.}
+\value{A matrix of size n*(n.BB + n.NN) of which the first n.BB 
+columns are binary variables and the last n.NN columns are continuous variables.}
+
 
 \references{Demirtas, H., Hedeker, D., and Mermelstein, R.J. (2012). Simulation of massive public health data by power polynomials. 
 Statistics in Medicine, 31(27), 3337-3346.}
