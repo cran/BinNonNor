@@ -29,7 +29,7 @@ Statistics in Medicine, 31(27), 3337-3346.}
 prop.vec=c(0.4,0.7)
 n.BB=2
 n.NN=4
-corr.vec = NULL
+corr.vec=NULL
 corr.mat=matrix(c(1.0,-0.3,-0.3,-0.3,-0.3,-0.3,
 -0.3,1.0,-0.3,-0.3,-0.3,-0.3,
 -0.3,-0.3,1.0,0.4,0.5,0.6,
@@ -43,27 +43,27 @@ coef.mat=matrix(c(
   0.31375,  0.00000, -0.10045,  0.10448,
   0.02271, -0.02945, -0.04001,  0.00272),4,byrow=TRUE)
 
-correlation.bound.check(n.BB, n.NN, prop.vec, corr.vec = NULL, corr.mat, coef.mat)
+correlation.bound.check(n.BB,n.NN,prop.vec,corr.vec=NULL,corr.mat,coef.mat)
 
 cor.mat.BB=corr.mat[1:2,1:2]
-correlation.bound.check(n.BB, n.NN=0,prop.vec, corr.vec=NULL,corr.mat=cor.mat.BB,
+correlation.bound.check(n.BB,n.NN=0,prop.vec,corr.vec=NULL,corr.mat=cor.mat.BB,
 coef.mat=NULL)
 
 cor.mat.NN=corr.mat[3:6,3:6]
-correlation.bound.check(n.BB=0, n.NN,prop.vec=NULL, corr.vec=NULL,corr.mat=cor.mat.NN,
+correlation.bound.check(n.BB=0,n.NN,prop.vec=NULL,corr.vec=NULL,corr.mat=cor.mat.NN,
 coef.mat)
 
-n.BB<-1
-prop.vec<-0.5
-corr.mat<-diag(n.BB)
-correlation.bound.check(n.BB, n.NN=0, prop.vec, corr.vec=NULL,corr.mat=corr.mat,
+n.BB=1
+prop.vec=0.5
+corr.mat=diag(n.BB)
+correlation.bound.check(n.BB,n.NN=0,prop.vec,corr.vec=NULL,corr.mat=corr.mat,
 coef.mat=NULL)
 
 \dontrun{
 cor.mat.NNnew=cor.mat.NN
 cor.mat.NNnew[1,2]=0.92
 cor.mat.NNnew[2,1]=0.92
-correlation.bound.check(n.BB=0, n.NN,prop.vec=NULL, corr.vec=NULL,corr.mat=cor.mat.NNnew,
+correlation.bound.check(n.BB=0,n.NN,prop.vec=NULL,corr.vec=NULL,corr.mat=cor.mat.NNnew,
 coef.mat)
 }
 }

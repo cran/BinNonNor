@@ -21,18 +21,13 @@ Statistics in Medicine, 31(27), 3337-3346.}
 n.NN<-3
 skewness.vec=c(0,2,3)
 kurtosis.vec=c(-1.2,6,8)
-validation.skewness.kurtosis(n.NN,skewness.vec, kurtosis.vec)
+validation.skewness.kurtosis(n.NN,skewness.vec,kurtosis.vec)
 
 \dontrun{
-n.NN<-3
-skewness.vec=c(0,2,3)
-kurtosis.vec=c(-1.2,6,8)
-validation.skewness.kurtosis(skewness.vec, kurtosis.vec)
-
 n.NN<--1
 skewness.vec=c(0)
 kurtosis.vec=c(-1.2)
-validation.skewness.kurtosis(n.NN,skewness.vec, kurtosis.vec)
+validation.skewness.kurtosis(n.NN,skewness.vec,kurtosis.vec)
 
 n.NN<-3
 skewness.vec=c(0,2,3)
@@ -48,20 +43,20 @@ validation.skewness.kurtosis(n.NN,kurtosis.vec)
 n.NN<-0
 skewness.vec=c(0,2,3)
 kurtosis.vec=c(-1.2,6,8)
-validation.skewness.kurtosis(n.NN,skewness.vec, kurtosis.vec)
+validation.skewness.kurtosis(n.NN,skewness.vec,kurtosis.vec)
 
 n.NN<-2
 skewness.vec=c(0,2,3)
 kurtosis.vec=c(-1.2,6,8)
-validation.skewness.kurtosis(n.NN,skewness.vec, kurtosis.vec)
+validation.skewness.kurtosis(n.NN,skewness.vec,kurtosis.vec)
 
 n.NN<-2
 skewness.vec=c(0,2,3)
 kurtosis.vec=c(-1.2,6)
-validation.skewness.kurtosis(n.NN,skewness.vec, kurtosis.vec)
+validation.skewness.kurtosis(n.NN,skewness.vec,kurtosis.vec)
 
 skewness.vec=c(2,3)
 kurtosis.vec=c(1,5)
-validation.skewness.kurtosis(n.NN,skewness.vec, kurtosis.vec)
+validation.skewness.kurtosis(n.NN,skewness.vec,kurtosis.vec)
 }
 }

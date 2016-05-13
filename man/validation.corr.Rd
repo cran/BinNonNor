@@ -20,9 +20,9 @@ checks whether the matrix and vector are conformable.}
 \seealso{\code{\link{correlation.limits}}, \code{\link{correlation.bound.check}} }
 
 \examples{
-n.BB<-2
-n.NN<-4
-corr.vec = NULL
+n.BB=2
+n.NN=4
+corr.vec=NULL
 corr.mat=matrix(c(1.0,-0.3,-0.3,-0.3,-0.3,-0.3,
 -0.3,1.0,-0.3,-0.3,-0.3,-0.3,
 -0.3,-0.3,1.0,0.4,0.5,0.6,
@@ -30,34 +30,34 @@ corr.mat=matrix(c(1.0,-0.3,-0.3,-0.3,-0.3,-0.3,
 -0.3,-0.3,0.5,0.7,1.0,0.9,
 -0.3,-0.3,0.6,0.8,0.9,1.0),6,byrow=TRUE)
 
-validation.corr(n.BB, n.NN, corr.vec = NULL, corr.mat)
+validation.corr(n.BB,n.NN,corr.vec=NULL,corr.mat)
 
-n.BB<-2
-n.NN<-4
+n.BB=2
+n.NN=4
 corr.vec=c(-0.3,-0.3,-0.3,-0.3,-0.3,-0.3,-0.3,-0.3,-0.3,0.4,0.5,0.6,0.7,0.8,0.9)
-validation.corr(n.BB, n.NN, corr.vec, corr.mat=NULL)
+validation.corr(n.BB,n.NN,corr.vec,corr.mat=NULL)
 
 \dontrun{
-n.BB<-0
-n.NN<-4
-validation.corr(n.BB, n.NN, corr.vec = NULL, corr.mat)
+n.BB=0
+n.NN=4
+validation.corr(n.BB,n.NN,corr.vec=NULL,corr.mat)
 
-n.BB<-2
-n.NN<-0
-validation.corr(n.BB, n.NN=0, corr.vec = NULL, corr.mat)
+n.BB=2
+n.NN=0
+validation.corr(n.BB,n.NN=0,corr.vec=NULL,corr.mat)
 
 corr.matc=corr.mat[3:6,3:6]
-validation.corr(n.BB=0, n.NN=4, corr.vec = NULL, corr.mat=corr.matc)
+validation.corr(n.BB=0,n.NN=4,corr.vec=NULL,corr.mat=corr.matc)
 
 corr.mat[2,1]=0.5
-validation.corr(n.BB, n.NN, corr.vec = NULL, corr.mat)
+validation.corr(n.BB,n.NN,corr.vec=NULL,corr.mat)
 
 corr.mat[1,2]=0.5
 corr.mat[3,1]=1.5
 corr.mat[1,3]=1.5
-validation.corr(n.BB, n.NN, corr.vec = NULL, corr.mat)
+validation.corr(n.BB,n.NN,corr.vec=NULL,corr.mat)
 
-npd <- matrix(c(1,     0.477, 0.644, 0.478, 0.651, 0.826,
+npd<-matrix(c(1,     0.477, 0.644, 0.478, 0.651, 0.826,
                0.477, 1,     0.516, 0.233, 0.682, 0.75,
                0.644, 0.516, 1,     0.599, 0.581, 0.742,
                0.478, 0.233, 0.599, 1,     0.741, 0.8,
@@ -65,12 +65,12 @@ npd <- matrix(c(1,     0.477, 0.644, 0.478, 0.651, 0.826,
                0.826, 0.75,  0.742, 0.8,   0.798, 1),
                nrow = 6, ncol = 6)
 
-validation.corr(n.BB, n.NN, corr.vec = NULL, corr.mat=npd)
+validation.corr(n.BB,n.NN,corr.vec=NULL,corr.mat=npd)
 
-n.BB<-1
-n.NN<-0
+n.BB=1
+n.NN=0
 corr.mat<-diag(1)
-validation.corr(n.BB, n.NN, corr.vec = NULL, corr.mat)
+validation.corr(n.BB,n.NN,corr.vec=NULL,corr.mat)
 
 }
 }

@@ -9,9 +9,9 @@ simultaneously given the marginal characteristics and association structure base
 \tabular{ll}{
 Package: \tab BinNonNor\cr
 Type: \tab Package\cr
-Version: \tab 1.2\cr
-Date: \tab 2015-03-01\cr
-License: \tab GPL (>= 2) \cr
+Version: \tab 1.3\cr
+Date: \tab 2016-05-13\cr
+License: \tab GPL-2 | GPL-3 \cr
 }
 This package consists of eleven functions. The functions \code{\link{validation.bin}},
 \code{\link{validation.corr}}, and \code{\link{validation.skewness.kurtosis}} validate the specified quantities to avoid obvious specification errors. The function
@@ -28,7 +28,7 @@ variables are supposed to be inputted in a certain order, namely, first binary v
 }
 \author{Gul Inan, Hakan Demirtas 
 
-Maintainer: Gul Inan <ginan@metu.edu.tr>}
+Maintainer: Gul Inan <inanx002@umn.edu>}
 
 \references{Demirtas, H., Hedeker, D., and Mermelstein, R.J. (2012). Simulation of massive public health data by power polynomials. 
 Statistics in Medicine, 31(27), 3337-3346.}

@@ -1,3 +1,7 @@
 exportPattern("^[[:alpha:]]+")
 
 import(BB,corpcor, mvtnorm, Matrix)
+
+importFrom("stats","cor","qnorm","rbinom","rnorm","uniroot","dnorm","integrate")
+
+importFrom("utils","capture.output")

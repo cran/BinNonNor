@@ -20,10 +20,6 @@ prop.vec=c(0.5,0.6)
 validation.bin(n.B,prop.vec)
 
 \dontrun{
-n.B<-2
-prop.vec=c(0.5,0.6)
-validation.bin(prop.vec)
-
 n.B<-3
 prop.vec=c(0.5,0.6)
 validation.bin(n.B,prop.vec)
