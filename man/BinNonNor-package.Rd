@@ -9,8 +9,8 @@ simultaneously given the marginal characteristics and association structure base
 \tabular{ll}{
 Package: \tab BinNonNor\cr
 Type: \tab Package\cr
-Version: \tab 1.4\cr
-Date: \tab 2018-01-02\cr
+Version: \tab 1.5\cr
+Date: \tab 2019-03-01\cr
 License: \tab GPL-2 | GPL-3 \cr
 }
 This package consists of eleven functions. The functions \code{\link{validation.bin}},
@@ -26,9 +26,9 @@ The function \code{\link{overall.corr.mat}} assembles the final correlation matr
 generates mixed data in accordance with the specified marginal and correlational quantities. Throughout the package, 
 variables are supposed to be inputted in a certain order, namely, first binary variables, and then continuous variables should be placed. 
 }
-\author{Gul Inan, Hakan Demirtas 
+\author{Gul Inan, Hakan Demirtas, Ran Gao 
 
-Maintainer: Gul Inan <ginan@metu.edu.tr>}
+Maintainer: Ran Gao <rgao8@uic.edu>}
 
 \references{Demirtas, H., Hedeker, D., and Mermelstein, R.J. (2012). Simulation of massive public health data by power polynomials. 
 Statistics in Medicine, 31(27), 3337-3346.}

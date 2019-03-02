@@ -1,7 +1,7 @@
 \name{Tetra.Corr.BB}
 \alias{Tetra.Corr.BB}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Computes an tetrachoric correlation matrix for binary variables given the specified correlation matrix}
+\title{Computes the tetrachoric correlation matrix for binary variables given the specified correlation matrix}
 \description{This function computes the tetrachoric correlation matrix for binary-binary combinations as formulated in Demirtas et al.
 (2012).}
 

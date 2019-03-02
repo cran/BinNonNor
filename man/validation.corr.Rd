@@ -3,7 +3,7 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Validates the specified correlation matrix}
 \description{This function validates the specified correlation vector and/or matrix for appropriate dimension, symmetry,
-range, and positive definiteness. If both correlation matrix and correlation vector were supplied, it
+range, and positive definiteness. If both correlation matrix and correlation vector are supplied, it
 checks whether the matrix and vector are conformable.}
 
 \usage{validation.corr(n.BB, n.NN, corr.vec = NULL, corr.mat = NULL)}

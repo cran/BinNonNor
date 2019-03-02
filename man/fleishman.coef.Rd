@@ -19,8 +19,8 @@ continuous variables.}
 Fleishman polynomials. However, since users need to run it only once for a given set of specifications, it does not constitute a problem.} 
 
 \references{Demirtas, H., Hedeker, D., and Mermelstein, R.J. (2012). Simulation of massive public health data by power polynomials. 
-Statistics in Medicine, 31(27), 3337-3346.
-
+Statistics in Medicine, 31(27), 3337-3346.\cr
+\cr
 Fleishman, A.I. (1978). A method for simulating non-normal distributions. Psychometrika, 43(4), 521-532.}
 
 \seealso{\code{\link{validation.skewness.kurtosis}} }

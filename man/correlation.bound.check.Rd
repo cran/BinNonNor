@@ -2,8 +2,7 @@
 \alias{correlation.bound.check}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Checks if the pairwise correlation among variables are within the feasible range}
-\description{This function checks if there are range violations among correlation  of binary-binary, binary-continuous non-normal 
-and continuous non-normal-continuous non-normal continuous combinations.}
+\description{This function checks if there are range violations among correlation of binary-binary, binary-continuous, and continuous-continuous combinations.}
 \usage{correlation.bound.check(n.BB, n.NN, prop.vec = NULL, corr.vec = NULL, 
        corr.mat = NULL, coef.mat = NULL)}
 \arguments{

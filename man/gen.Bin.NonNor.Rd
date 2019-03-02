@@ -1,7 +1,7 @@
 \name{gen.Bin.NonNor}
 \alias{gen.Bin.NonNor}
 \title{Simulates a sample of size n from a set of multivariate binary and continuous non-normal variables}
-\description{This function simulates a sample of size n from a set of multivariate binary and continuous non-normal data with pre-specified marginals and final correlation matrix. Setting n.NN=0 and quantities that are pertinent to the continuous part to NULL results in simulation of a sample of size n from a set of multivariate binary variables. Similarly, setting n.BB=0
+\description{This function simulates a multivariate data set with binary and continuous components with pre-specified marginals and a correlation matrix. Setting n.NN=0 and quantities that are pertinent to the continuous part to NULL results in simulation of a sample of size n from a set of multivariate binary variables. Similarly, setting n.BB=0
 and prop.vec=NULL results in simulation of a sample of size n from a set of multivariate continuous non-normal variables.}
 
 \usage{gen.Bin.NonNor(n, n.BB, n.NN, prop.vec = NULL, mean.vec = NULL, variance.vec = NULL, 

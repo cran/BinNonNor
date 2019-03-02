@@ -1,7 +1,7 @@
 \name{Biserial.Corr.BN}
 \alias{Biserial.Corr.BN}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Computes biserial correlation matrix for binary and continuous non-normal variables given the specified correlation matrix}
+\title{Computes the biserial correlation matrix for binary and continuous non-normal variables given the specified correlation matrix}
 \description{This function computes the biserial correlation matrix for binary-continuous non-normal combinations as formulated in Demirtas et al.
 (2012).}
 \usage{Biserial.Corr.BN(n.BB, n.NN, prop.vec, corr.vec = NULL, corr.mat = NULL, coef.mat)}

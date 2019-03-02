@@ -3,10 +3,8 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Computes the final correlation matrix}
 
-\description{This function computes the final correlation matrix by combining tetrachoric correlation for
-binary-binary combinations, biserial correlations for binary-continuous non-normal combinations, and intermediate correlation matrix
-for continuous non-normal-continuous non-normal combinations. If the resulting correlation matrix is not positive definite,
-a nearest positive matrix will be used.}
+\description{This function computes the final correlation matrix by combining tetrachoric correlation for binary-binary combinations, 
+biserial correlations for binary-continuous combinations, and intermediate correlation matrix for continuous-continuous combinations.}
 
 \usage{overall.corr.mat(n.BB, n.NN, prop.vec = NULL, corr.vec = NULL, corr.mat = NULL, 
 coef.mat = NULL)}
