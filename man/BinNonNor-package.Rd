@@ -9,8 +9,8 @@ simultaneously given the marginal characteristics and association structure base
 \tabular{ll}{
 Package: \tab BinNonNor\cr
 Type: \tab Package\cr
-Version: \tab 1.5\cr
-Date: \tab 2019-03-01\cr
+Version: \tab 1.5.1\cr
+Date: \tab 2019-05-15\cr
 License: \tab GPL-2 | GPL-3 \cr
 }
 This package consists of eleven functions. The functions \code{\link{validation.bin}},

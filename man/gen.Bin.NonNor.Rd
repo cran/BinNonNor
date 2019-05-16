@@ -91,6 +91,7 @@ kurtosis.vec,final.corr.mat,coef.mat)
 amat=final.corr.mat[1:2,1:2]
 multibin=gen.Bin.NonNor(n=1000,n.BB,n.NN=0,prop.vec,mean.vec=NULL,variance.vec=NULL, 
 skewness.vec=NULL,kurtosis.vec=NULL,final.corr.mat=amat,coef.mat=NULL)
+
 apply(multibin,2,mean)
 
 bmat=final.corr.mat[3:6,3:6]
@@ -127,7 +128,9 @@ kurtosis.vec=NULL
 corr.vec=NULL
 corr.mat=diag(1)
 coef.mat=NULL
+
 final.corr.mat=overall.corr.mat(n.BB,n.NN,prop.vec,corr.vec=NULL,corr.mat,coef.mat)
+
 data=gen.Bin.NonNor(n,n.BB,n.NN,prop.vec,mean.vec,variance.vec,skewness.vec, 
 kurtosis.vec,final.corr.mat,coef.mat)
 }
