@@ -1,8 +1,8 @@
 Package: BinNonNor
 Type: Package
 Title: Data Generation with Binary and Continuous Non-Normal Components
-Version: 1.5.1
-Date: 2019-05-15
+Version: 1.5.2
+Date: 2020-04-14
 Author: Gul Inan, Hakan Demirtas, Ran Gao
 Maintainer: Ran Gao <rgao8@uic.edu>
 Description: Generation of multiple binary and continuous non-normal variables simultaneously 
@@ -11,6 +11,6 @@ Description: Generation of multiple binary and continuous non-normal variables s
 License: GPL-2 | GPL-3
 Depends: BB, corpcor, mvtnorm, Matrix
 NeedsCompilation: no
-Packaged: 2019-05-16 02:38:56 UTC; rangao
+Packaged: 2020-04-14 23:07:55 UTC; rangao
 Repository: CRAN
-Date/Publication: 2019-05-16 05:00:13 UTC
+Date/Publication: 2020-04-15 05:50:24 UTC
