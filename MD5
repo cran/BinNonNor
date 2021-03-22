@@ -1,4 +1,4 @@
-8381daf3bd23403b1525b7f1c1914cdc *DESCRIPTION
+6fa9085cbbc83739d3b084868322c8e5 *DESCRIPTION
 563a1cc13ce2bf678f0313588b381109 *NAMESPACE
 44f69c827b7c99cd84a5c170fa0e56d2 *R/Biserial.Corr.BN.R
 11a29e3d9eb650f4e8c5b1fef1d6d399 *R/Int.Corr.NN.R
@@ -11,7 +11,7 @@ eee42385d17a9b85cdc49fdb7a7d89e8 *R/overall.corr.mat.R
 90b9ea8c504a60e205c5e68b64c6eebd *R/validation.bin.R
 d0aae067bfbb6f319ac425fcd9fac04a *R/validation.corr.R
 1c9d6e02f92c192aaec9794178d617bc *R/validation.skewness.kurtosis.R
-6cfd9d1064b9df68125c708d6ed7019a *man/BinNonNor-package.Rd
+04a89ce71651a5720876f3e12bda6fe9 *man/BinNonNor-package.Rd
 9ecf73ec566aa64335a97350d82aa9fe *man/Biserial.Corr.BN.Rd
 ac4d6ea527d25b43757d44a8ab6b12e9 *man/Int.Corr.NN.Rd
 c0c6d297910b1e716eed86424fd22fd1 *man/Tetra.Corr.BB.Rd
